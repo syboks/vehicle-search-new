@@ -31,7 +31,7 @@ public class ManufacturerController {
         return ResponseEntity.status(HttpStatus.OK).body(savedManufacturers);
     }
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public ResponseEntity<Manufacturer> getManufacturers(@PathVariable int id){
         Manufacturer dbManufacturer=manufacturerService.getManufacturerForId(id);
         return ResponseEntity.ok(dbManufacturer);
