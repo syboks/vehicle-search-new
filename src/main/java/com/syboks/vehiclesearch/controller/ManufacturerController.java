@@ -25,9 +25,9 @@ public class ManufacturerController {
         return new ResponseEntity<>(dbRecord, HttpStatus.CREATED);
     }
 
-    @GetMapping
+ /*   @GetMapping
     public ResponseEntity<List<Manufacturer>> getAllManufacturer(){
         List<Manufacturer> savedManufacturers=manufacturerService.f
     }
-
+*/
 }
