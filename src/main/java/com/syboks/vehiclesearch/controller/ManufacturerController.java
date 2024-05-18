@@ -59,6 +59,10 @@ public class ManufacturerController {
         return new ResponseEntity<>(updatedManufacturer, HttpStatus.OK);
     }
 
-
+@DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteMamufacturerById(@PathVariable int id) throws ManufacturerNotFoundException {
+        manufacturerService.deleteManufacturerById(id);
+        return new ResponseEntity<>("Manufacturer deleted with id "+id, HttpStatus.OK);
+}
 
 }
